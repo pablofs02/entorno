@@ -1,0 +1,34 @@
+# ~/.config/lsd/config.yaml
+
+blocks:
+  - permission
+  - user
+  - group
+  - size
+  - date
+  - name
+color:
+  when: always
+  theme: ttr.yaml
+date: +%H:%M %d/%m/%g
+dereference: false
+icons:
+  when: never # arreglar
+  theme: fancy
+  separator: " "
+indicators: false
+layout: grid
+recursion:
+  enabled: false
+  depth: 2
+size: short
+permission: rwx
+sorting:
+  column: name
+  reverse: false
+  dir-grouping: first
+no-symlink: false
+total-size: true
+hyperlink: never
+symlink-arrow: →
+header: false
