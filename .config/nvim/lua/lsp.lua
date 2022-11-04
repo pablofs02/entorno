@@ -1,41 +1,5 @@
-syntax enable
-set showmatch
-set showcmd
-set encoding=utf-8
-set number
-set relativenumber
-set mouse=a
-set tabstop=4
-set shiftwidth=4
-set smartindent
-set nohlsearch
-set incsearch
-set ignorecase
-set smartcase
-set clipboard=unnamed
+vim.opt.completeopt = {'menu','menuone','noselect'}
 
-call plug#begin('~/.config/nvim/plugged')
-Plug 'sainnhe/gruvbox-material'
-Plug 'williamboman/mason.nvim'
-Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
-call plug#end()
-
-" Tema
-set background=dark
-let g:gruvbox_material_background='medium'
-colorscheme gruvbox-material
-highlight Normal ctermbg=none
-highlight EndOfBuffer ctermbg=none
-
-" CMP y LSP
-set completeopt=menu,menuone,noselect
-lua << FIN
 require("mason").setup()
 require("mason-lspconfig").setup()
 
@@ -118,4 +82,3 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
 	capabilities = capabilities
 }
-FIN
