@@ -1,0 +1,7 @@
+[user]
+	email = fpablo960@gmail.com
+	name = TetrisRubik
+[core]
+	editor = nvim
+[init]
+	defaultBranch = Principal
