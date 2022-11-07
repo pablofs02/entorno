@@ -1,9 +1,5 @@
-alias -g lqh="cat ~/.Notas/quehaceres"
-alias -g mqh="nv ~/.Notas/quehaceres"
-alias -g lcm="cat ~/.Notas/comandos"
-alias -g mcm="nv ~/.Notas/comandos"
-alias -g lpr="bat ~/.Notas/programas"
-alias -g mpr="nv ~/.Notas/programas"
+alias -g lqh="bat ~/Documentos/Información/quehaceres"
+alias -g mqh="nv ~/Documentos/Información/quehaceres"
 
 alias -g nv='nvim'
 alias -g ls='lsd 2>/dev/null'
@@ -11,7 +7,7 @@ alias -g lsa='lsd -A 2>/dev/null'
 alias -g l='lsd -l 2>/dev/null'
 alias -g la='lsd -lA 2>/dev/null'
 alias -g tree='lsd --tree 2>/dev/null'
-alias -g cat='bat --style numbers'
+alias -g bat='bat --style numbers'
 alias -g grep='grep --color=auto'
 alias -g cp="cp -i"
 alias -g mv='mv -i'
