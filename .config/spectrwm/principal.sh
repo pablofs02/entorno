@@ -1,7 +1,7 @@
 demora=10
 while :; do
 	bateria=$( ~/.config/spectrwm/bateria.sh )
-	reloj=$( ~/.config/spectrwm/hora.sh )
+	reloj=`date +'%H:%M'`
 	fecha=" `date +'%a %d %b %Y'`"
 	temperatura=$( ~/.config/spectrwm/temperatura.sh )
 	memoria=$( ~/.config/spectrwm/memoria.sh )
