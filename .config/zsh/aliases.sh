@@ -2,12 +2,12 @@ alias -g lqh="bat ~/Documentos/Información/quehaceres"
 alias -g mqh="nv ~/Documentos/Información/quehaceres"
 
 alias -g nv='nvim'
-alias -g ls='lsd 2>/dev/null'
-alias -g lsa='lsd -A 2>/dev/null'
 alias -g l='lsd -l 2>/dev/null'
-alias -g la='lsd -lA 2>/dev/null'
+alias -g lt='lsd -lA 2>/dev/null'
+alias -g ls='lsd 2>/dev/null'
+alias -g lst='lsd -A 2>/dev/null'
 alias -g tree='lsd --tree 2>/dev/null'
-alias -g bat='bat --style numbers'
+alias -g bat='bat --style numbers --color always --theme base16'
 alias -g grep='grep --color=auto'
 alias -g cp="cp -i"
 alias -g mv='mv -i'

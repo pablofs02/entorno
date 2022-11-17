@@ -1,4 +1,4 @@
-demora=10
+demora=5
 while :; do
 	bateria=$( ~/.config/spectrwm/bateria.sh )
 	reloj=`date +'%H:%M'`

@@ -29,7 +29,7 @@ fi
 if [ $estado != "Discharging" ]; then
 	icono="${icono}"
 else
-	icono="$icono "
+	icono="${icono} "
 fi
 
 echo "$icono${nivel}%"
