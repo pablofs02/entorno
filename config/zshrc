@@ -4,39 +4,40 @@ bindkey -v
 tabs 4
 
 # Aliases
-alias nf=neofetch
-alias lqh="bat ~/Documentos/Información/quehaceres"
-alias mqh="nv ~/Documentos/Información/quehaceres"
-
-alias nv='nvim'
-alias l='lsd -l 2>/dev/null'
-alias lt='lsd -lA 2>/dev/null'
-alias ls='lsd 2>/dev/null'
-alias lst='lsd -A 2>/dev/null'
-alias tree='lsd --tree 2>/dev/null'
+alias t='gtypist esp.typ'
+alias -g nv='nvim'
+alias exa='exa --group-directories-first'
+alias l='exa -l'
+alias la='exa -la'
+alias ls='exa'
+alias lsa='exa -a'
+alias tree='exa --tree -L=2'
 alias bat='bat --style numbers --color always --theme base16'
 alias grep='grep --color=auto'
-alias cp="cp -i"
-alias mv='mv -i'
+alias -g cp="cp -ir"
+alias -g mv='mv -i'
 alias df='df -h'
 alias free='free -h'
 alias psmem='ps auxf | sort -nr -k 4 | head -5'
 alias pscpu='ps auxf | sort -nr -k 3 | head -5'
+alias mount='sudo mount'
+alias umount='sudo umount -a 2>/dev/null'
+alias nf='neofetch'
 
 alias pmi='sudo pacman -S'
 alias pmb='pacman -Ss'
 alias pmd='sudo pacman -Rcdnsu'
 alias pml='pacman -Q'
 alias pmo='pacman -Q | grep'
-alias pma='sudo pacman -Syyu'
-alias pmm='sudo pacman -Rsn $(pacman -Qdtq) || pacman -Scc'
+alias pma='sudo pacman -Syyyuu'
+alias pmc='sudo pacman -Scc'
 
-alias apaga='shutdown -f now'
-alias reini='shutdown -r now'
+alias apaga='sudo shutdown -f now'
+alias reini='sudo shutdown -r now'
 
 # Exportaciones
 export PATH=$PATH:~/.local/bin/:./
-export XDG_CONFIG_DIR=~/.config
+export XDG_CONFIG_DIR="~/.config"
 export EDITOR="nvim"
 export TERMINAL="kitty"
 export BROWSER="firefox"
@@ -48,10 +49,10 @@ HISTSIZE=1000
 HISTFILE=~/.cache/historial
 
 # Coloreado
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-zle_highlight=('paste:none')
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_STYLES[path]=none
-ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=green'
+zle_highlight=('paste:none')
 
 # Etiqueta
 autoload -Uz vcs_info

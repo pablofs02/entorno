@@ -1,16 +1,17 @@
-demora=5
+demora=8
 
 bateria_actual() {
 	sacar="cat /sys/class/power_supply/BAT0/"
 	nivel=`${sacar}capacity`
 	estado=`${sacar}status`
 
-	if [ $nivel -le 5 ];then
+	if [ $nivel -le 10 ]; then
 		icono=''
-	elif [ $nivel -le 10 ]; then
-		icono=''
+		if [ $estado = "Discharging" ]; then
+			`notify-send "Batería baja" -u critical`
+		fi
 	elif [ $nivel -le 20 ]; then
-		icono=''
+		icono=''
 	elif [ $nivel -le 30 ]; then
 		icono=''
 	elif [ $nivel -le 40 ]; then
@@ -81,7 +82,7 @@ while :; do
 	centro="+|C $reloj"
 	derecha="+|R $bateria $temperatura $memoria $fecha"
 
-	echo -e "$izquierda $centro $derecha"
+	echo "$izquierda $centro $derecha"
 
 	sleep $demora
 done

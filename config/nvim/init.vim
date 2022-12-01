@@ -13,11 +13,8 @@ set incsearch
 set ignorecase
 set smartcase
 set clipboard=unnamedplus
-
-" Tema
-colorscheme gruvbox-material
-highlight Normal ctermbg=none
-highlight EndOfBuffer ctermbg=none
+set path+=**
+set wildmenu
 
 " Extensiones
 call plug#begin('~/.config/nvim/plugged')
@@ -39,14 +36,25 @@ Plug 'yggdroot/indentline'
 Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
+" Tema
+colorscheme gruvbox-material
+highlight Normal ctermbg=none
+highlight EndOfBuffer ctermbg=none
+
 " Barra de estado
 let g:lightline = {
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'gitbranch#name'
-      \ },
-      \ }
-let g:lightline.colorscheme = 'gruvbox'
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+    \ },
+    \ 'component_function': {
+    \   'gitbranch': 'gitbranch#name'
+    \ },
+    \ 'colorschem': 'gruvbox',
+    \ 'mode_map': {
+    \       'i': 'INSERTAR',
+    \       'R': 'REEMPLAZAR',
+    \       'V' : 'V-LÍNEA',
+    \       "\<C-v>": 'V-BLOQUE'
+    \ }
+\ }

@@ -1,0 +1,9 @@
+setxkbmap es
+setxkbmap -option caps:swapescape
+xset r rate 300 50
+xrandr --output Virtual-1 --mode 1920x1080
+clipmenud &
+dunst &
+nitrogen --restore &
+picom -f &
+exec spectrwm
