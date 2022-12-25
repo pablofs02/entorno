@@ -1,17 +1,23 @@
-setopt autocd cdable_vars chase_dots promptsubst rmstarsilent interactive_comments 
+setopt autocd cdable_vars chase_dots promptsubst rmstarsilent interactive_comments
 
 bindkey -v
 tabs 4
 
 # Aliases
 alias t='gtypist esp.typ'
-alias -g nv='nvim'
-alias exa='exa --group-directories-first'
-alias l='exa -l'
-alias la='exa -la'
+alias -g e='nvim'
+alias ev='e ~/.config/nvim/init.vim'
+alias ez='e ~/.zshrc'
+alias -g exa='exa --group-directories-first'
+alias -g l='exa -l'
+alias -g la='exa -la'
 alias ls='exa'
 alias lsa='exa -a'
-alias tree='exa --tree -L=2'
+alias tree='exa --tree'
+alias lr='tree -R'
+alias lra='tree -Ra'
+alias ld='exa -R | grep "\./"'
+alias lda='exa -Ra | grep "\./"'
 alias bat='bat --style numbers --color always --theme base16'
 alias grep='grep --color=auto'
 alias -g cp="cp -ir"
@@ -24,6 +30,12 @@ alias mount='sudo mount'
 alias umount='sudo umount -a 2>/dev/null'
 alias nf='neofetch'
 
+alias m='mpv ~/música/*/* --shuffle'
+alias mc='mpv ~/música/clásica/*/* --shuffle'
+alias me='mpv ~/música/español/*/* --shuffle'
+alias mi='mpv ~/música/inglés/*/* --shuffle'
+alias mj='mpv ~/música/japonés/*/* --shuffle'
+
 alias pmi='sudo pacman -S'
 alias pmb='pacman -Ss'
 alias pmd='sudo pacman -Rcdnsu'
@@ -32,16 +44,8 @@ alias pmo='pacman -Q | grep'
 alias pma='sudo pacman -Syyyuu'
 alias pmc='sudo pacman -Scc'
 
-alias apaga='sudo shutdown -f now'
-alias reini='sudo shutdown -r now'
-
-# Exportaciones
-export PATH=$PATH:~/.local/bin/:./
-export XDG_CONFIG_DIR="~/.config"
-export EDITOR="nvim"
-export TERMINAL="kitty"
-export BROWSER="firefox"
-export KEYTIMEOUT=1
+alias zz='sudo shutdown -f now'
+alias re='sudo shutdown -r now'
 
 # Historial
 SAVEHIST=1000
